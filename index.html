@@ -124,7 +124,7 @@
   <div class="nav-tab" onclick="showTab('inventory')">재고 현황</div>
   <div class="nav-tab" onclick="showTab('report')">월별 리포트</div>
   <div class="nav-tab" onclick="showTab('ai-summary')">🤖 AI 월간요약</div>
-  <div class="nav-tab" onclick="showTab('ai-order')">🤖 AI 발주추천 <span class="soon">준비중</span></div>
+  <div class="nav-tab" onclick="showTab('ai-order')">🤖 AI 발주추천</div>
 </nav>
 
 <div>
@@ -353,7 +353,7 @@
         <div class="ai-feature"><div class="fi">⚠️</div><div class="ft">재고 부족 감지</div><div class="fd">임계치 이하 품목 자동 알림</div></div>
         <div class="ai-feature"><div class="fi">📈</div><div class="ft">이상 감지</div><div class="fd">급증 / 급감 품목 자동 분석</div></div>
       </div>
-      <a class="open-btn" href="https://airtable.com/embed/appqwZ1aXxulrO2ez/shr1VWDR5dbIsoe94" target="_blank">↗ AI 월간요약 열기</a>
+      <a class="open-btn" href="https://airtable.com/embed/appqwZ1aXxulrO2ez/shrXe0GPjps8OunC5" target="_blank">↗ AI 월간요약 열기</a>
     </div>
   </div>
 
@@ -361,17 +361,34 @@
   <div class="panel" id="tab-ai-order">
     <div class="panel-inner">
       <div class="panel-title">🤖 AI 발주추천</div>
-      <div class="coming-box">
-        <div class="icon">🤖</div>
-        <h3>준비 중입니다</h3>
-        <p>데이터 기반 스마트 발주 추천 시스템을 개발 중입니다.</p>
+      <div class="panel-desc">30일 평균 출고 기반 스마트 발주 추천 시스템입니다.</div>
+
+      <div class="ai-features" style="margin-bottom:24px;">
+        <div class="ai-feature"><div class="fi">📅</div><div class="ft">매월 25일 자동 생성</div><div class="fd">전년/재작년 동월 출고 데이터 기반 AI 추천</div></div>
+        <div class="ai-feature"><div class="fi">📦</div><div class="ft">MOQ · 팔레트 단위 보정</div><div class="fd">매입처별 최소발주수량 및 그룹 팔레트 조건 자동 반영</div></div>
+        <div class="ai-feature"><div class="fi">⚠️</div><div class="ft">긴급도 자동 판단</div><div class="fd">현재재고 ÷ 월평균출고 < 리드타임 기준 자동 표시</div></div>
       </div>
-      <div class="ai-features">
-        <div class="ai-feature"><div class="fi">📅</div><div class="ft">30일 평균 출고</div><div class="fd">최근 30일 출고 기반 수요 예측</div></div>
-        <div class="ai-feature"><div class="fi">📆</div><div class="ft">전년 동월 비교</div><div class="fd">계절성 반영한 발주량 산정</div></div>
-        <div class="ai-feature"><div class="fi">📋</div><div class="ft">발주 추천서</div><div class="fd">매월 담당자 검토 후 확정</div></div>
+
+      <div class="report-info" style="max-width:700px; margin-bottom:24px;">
+        <div class="report-row">
+          <span class="ricon">🔄</span>
+          <div><div class="text">STATUS 관리</div><div class="sub">검토중 → 발주확정 → 발주완료 / 보류·지연·부분입고</div></div>
+        </div>
+        <div class="report-row">
+          <span class="ricon">✏️</span>
+          <div><div class="text">CONFIRMED_QTY</div><div class="sub">AI 추천수량 검토 후 실제 발주수량 직접 입력</div></div>
+        </div>
+        <div class="report-row">
+          <span class="ricon">🤖</span>
+          <div><div class="text">REC_REASON</div><div class="sub">[긴급] / [보통] 태그 포함 AI 추천 근거 자동 생성</div></div>
+        </div>
+        <div class="report-row">
+          <span class="ricon">🏭</span>
+          <div><div class="text">매입처 그룹발주 지원</div><div class="sub">SUPPLIER_GROUP 기준 팔레트 합산 자동 보정</div></div>
+        </div>
       </div>
-      <a class="open-btn" href="https://airtable.com/appqwZ1aXxulrO2ez/shrr0dBS75pSr4R6j" target="_blank">↗ 현재 페이지 열기</a>
+
+      <a class="open-btn" href="https://airtable.com/embed/appqwZ1aXxulrO2ez/shrr0dBS75pSr4R6j" target="_blank">↗ AI 발주추천 열기</a>
     </div>
   </div>
 </div>
